@@ -13,11 +13,9 @@ export default async function VokabelnPage({
   const { kategorie } = await searchParams
   const payload = await getPayloadClient()
 
-  const where = kategorie ? { kategorie: { equals: kategorie } } : {}
-
   const { docs } = await payload.find({
     collection: 'vokabeln',
-    where,
+    ...(kategorie ? { where: { kategorie: { equals: kategorie } } } : {}),
     depth: 1,
     limit: 200,
     sort: 'schwierigkeitsgrad',

@@ -13,11 +13,9 @@ export default async function RedewendungenPage({
   const { kontext } = await searchParams
   const payload = await getPayloadClient()
 
-  const where = kontext ? { kontext: { equals: kontext } } : {}
-
   const { docs } = await payload.find({
     collection: 'redewendungen',
-    where,
+    ...(kontext ? { where: { kontext: { equals: kontext } } } : {}),
     depth: 1,
     limit: 200,
     sort: 'schwierigkeitsgrad',

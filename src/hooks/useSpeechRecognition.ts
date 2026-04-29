@@ -4,6 +4,36 @@ import { useState, useCallback, useRef } from 'react'
 
 export type RecognitionStatus = 'idle' | 'listening' | 'done' | 'error' | 'unsupported'
 
+// Minimal Web Speech API types (not in lib.dom)
+interface SpeechRecognitionAlternative {
+  readonly transcript: string
+  readonly confidence: number
+}
+interface SpeechRecognitionResult {
+  readonly isFinal: boolean
+  readonly length: number
+  [index: number]: SpeechRecognitionAlternative
+}
+interface SpeechRecognitionResultList {
+  readonly length: number
+  [index: number]: SpeechRecognitionResult
+}
+interface SpeechRecognitionEvent extends Event {
+  readonly results: SpeechRecognitionResultList
+}
+interface SpeechRecognition extends EventTarget {
+  lang: string
+  interimResults: boolean
+  maxAlternatives: number
+  continuous: boolean
+  onstart: ((this: SpeechRecognition, ev: Event) => unknown) | null
+  onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => unknown) | null
+  onerror: ((this: SpeechRecognition, ev: Event) => unknown) | null
+  onend: ((this: SpeechRecognition, ev: Event) => unknown) | null
+  start(): void
+  stop(): void
+}
+
 export function useSpeechRecognition() {
   const [transcript, setTranscript] = useState('')
   const [status, setStatus] = useState<RecognitionStatus>('idle')
