@@ -23,10 +23,10 @@ export default async function HomePage() {
         <h1 className="text-4xl font-bold text-foreground mb-3">Deutsch für Floristik</h1>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto">
           Lerne Deutsch für deinen Job als Floristin — Vokabeln, Redewendungen und echte
-          Kundengespräche, auf Schweizer Niveau.
+          Kundengespräche, auf Schweizer 🇨🇭 Niveau.
         </p>
         <p className="text-sm text-muted-foreground/70 mt-2">
-          Aprende alemán para trabajar como florista en Suiza
+          Aprende alemán para trabajar como florista en Suiza 🇨🇭
         </p>
       </section>
 
