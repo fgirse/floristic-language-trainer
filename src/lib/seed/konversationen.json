@@ -1,0 +1,47 @@
+[
+  {
+    "titel": "Kundenansprache — Erster Kontakt",
+    "szenario": "Kundenansprache",
+    "schwierigkeitsgrad": "1",
+    "dialog": [
+      { "rolle": "Florist", "deutscherText": "Guten Morgen! Herzlich willkommen. Was darf es für Sie sein?", "spanischerText": "¡Buenos días! Bienvenido/a. ¿Qué desea?" },
+      { "rolle": "Kunde", "deutscherText": "Guten Morgen. Ich suche einen schönen Strauss für meine Frau.", "spanischerText": "Buenos días. Busco un ramo bonito para mi esposa." },
+      { "rolle": "Florist", "deutscherText": "Wie wunderbar! Für welchen Anlass ist das?", "spanischerText": "¡Qué bonito! ¿Para qué ocasión es?" },
+      { "rolle": "Kunde", "deutscherText": "Wir haben heute Hochzeitstag.", "spanischerText": "Hoy es nuestro aniversario de boda." },
+      { "rolle": "Florist", "deutscherText": "Herzlichen Glückwunsch! Ich empfehle Ihnen rote Rosen — sie sind heute sehr frisch.", "spanischerText": "¡Felicitaciones! Le recomiendo rosas rojas — están muy frescas hoy." },
+      { "rolle": "Kunde", "deutscherText": "Das klingt perfekt. Wie viel kostet das?", "spanischerText": "Eso suena perfecto. ¿Cuánto cuesta?" },
+      { "rolle": "Florist", "deutscherText": "Ein Strauss mit zwölf Rosen kostet dreissig Franken.", "spanischerText": "Un ramo de doce rosas cuesta treinta francos." },
+      { "rolle": "Kunde", "deutscherText": "Gut, ich nehme ihn.", "spanischerText": "Bien, lo llevo." }
+    ]
+  },
+  {
+    "titel": "Fachberatung — Pflanzenpflege",
+    "szenario": "Fachberatung",
+    "schwierigkeitsgrad": "2",
+    "dialog": [
+      { "rolle": "Kunde", "deutscherText": "Entschuldigung, ich habe eine Frage zur Pflanzenpflege.", "spanischerText": "Disculpe, tengo una pregunta sobre el cuidado de las plantas." },
+      { "rolle": "Florist", "deutscherText": "Natürlich, ich helfe Ihnen gerne. Was möchten Sie wissen?", "spanischerText": "Por supuesto, con mucho gusto le ayudo. ¿Qué desea saber?" },
+      { "rolle": "Kunde", "deutscherText": "Wie oft muss ich meine Orchidee giessen?", "spanischerText": "¿Con qué frecuencia debo regar mi orquídea?" },
+      { "rolle": "Florist", "deutscherText": "Orchideen brauchen nur einmal pro Woche Wasser. Weniger ist mehr.", "spanischerText": "Las orquídeas solo necesitan agua una vez a la semana. Menos es más." },
+      { "rolle": "Kunde", "deutscherText": "Und wie viel Licht braucht sie?", "spanischerText": "¿Y cuánta luz necesita?" },
+      { "rolle": "Florist", "deutscherText": "Orchideen mögen helles Licht, aber keine direkte Sonne. Ein Fensterplatz ist ideal.", "spanischerText": "Las orquídeas prefieren luz brillante, pero sin sol directo. Un lugar junto a la ventana es ideal." },
+      { "rolle": "Kunde", "deutscherText": "Vielen Dank, das war sehr hilfreich!", "spanischerText": "Muchas gracias, eso fue muy útil." },
+      { "rolle": "Florist", "deutscherText": "Gerne! Wenn Sie weitere Fragen haben, kommen Sie jederzeit wieder.", "spanischerText": "¡De nada! Si tiene más preguntas, venga cuando quiera." }
+    ]
+  },
+  {
+    "titel": "Zahlung — An der Kasse",
+    "szenario": "Zahlung",
+    "schwierigkeitsgrad": "1",
+    "dialog": [
+      { "rolle": "Florist", "deutscherText": "Das macht zusammen achtzehn Franken fünfzig, bitte.", "spanischerText": "Son dieciocho francos cincuenta en total, por favor." },
+      { "rolle": "Kunde", "deutscherText": "Bezahle ich hier mit Karte?", "spanischerText": "¿Pago aquí con tarjeta?" },
+      { "rolle": "Florist", "deutscherText": "Ja, natürlich. Sie können bar oder mit Kreditkarte bezahlen.", "spanischerText": "Sí, claro. Puede pagar en efectivo o con tarjeta de crédito." },
+      { "rolle": "Kunde", "deutscherText": "Dann zahle ich mit Karte.", "spanischerText": "Entonces pago con tarjeta." },
+      { "rolle": "Florist", "deutscherText": "Bitte halten Sie die Karte ans Terminal. Danke schön!", "spanischerText": "Por favor acerque la tarjeta al terminal. ¡Muchas gracias!" },
+      { "rolle": "Kunde", "deutscherText": "Könnte ich eine Quittung bekommen?", "spanischerText": "¿Podría obtener un recibo?" },
+      { "rolle": "Florist", "deutscherText": "Selbstverständlich. Hier ist Ihre Quittung. Auf Wiedersehen!", "spanischerText": "Por supuesto. Aquí está su recibo. ¡Hasta luego!" },
+      { "rolle": "Kunde", "deutscherText": "Danke, auf Wiedersehen!", "spanischerText": "Gracias, ¡hasta luego!" }
+    ]
+  }
+]

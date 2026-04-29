@@ -1,0 +1,19 @@
+[
+  { "deutscheRedewendung": "Guten Morgen! Was darf es für Sie sein?", "spanischeRedewendung": "¡Buenos días! ¿Qué desea?", "kontext": "Begrüssung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Herzlich willkommen in unserem Blumenladen.", "spanischeRedewendung": "Bienvenido/a a nuestra floristería.", "kontext": "Begrüssung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Guten Tag, wie kann ich Ihnen helfen?", "spanischeRedewendung": "Buenas tardes, ¿en qué puedo ayudarle?", "kontext": "Begrüssung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Auf Wiedersehen und danke für Ihren Besuch!", "spanischeRedewendung": "¡Hasta luego y gracias por su visita!", "kontext": "Begrüssung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Für welchen Anlass sind die Blumen?", "spanischeRedewendung": "¿Para qué ocasión son las flores?", "kontext": "Beratung", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Haben Sie eine Lieblingsfarbe?", "spanischeRedewendung": "¿Tiene un color favorito?", "kontext": "Beratung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Ich empfehle Ihnen diese Rosen — sie sind heute sehr frisch.", "spanischeRedewendung": "Le recomiendo estas rosas — están muy frescas hoy.", "kontext": "Beratung", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Möchten Sie die Blumen einwickeln lassen?", "spanischeRedewendung": "¿Desea que envolvamos las flores?", "kontext": "Beratung", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Das macht zusammen fünfundzwanzig Franken.", "spanischeRedewendung": "En total son veinticinco francos.", "kontext": "Verkauf", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Darf ich Ihnen noch etwas zeigen?", "spanischeRedewendung": "¿Puedo mostrarle algo más?", "kontext": "Verkauf", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Wir haben heute frische Lieferung erhalten.", "spanischeRedewendung": "Hoy recibimos una entrega fresca.", "kontext": "Verkauf", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Bezahlen Sie bar oder mit Karte?", "spanischeRedewendung": "¿Paga en efectivo o con tarjeta?", "kontext": "Zahlung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Hier ist Ihr Rückgeld — danke schön.", "spanischeRedewendung": "Aquí está su cambio — muchas gracias.", "kontext": "Zahlung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Möchten Sie eine Quittung?", "spanischeRedewendung": "¿Desea un recibo?", "kontext": "Zahlung", "schwierigkeitsgrad": "1" },
+  { "deutscheRedewendung": "Die Bestellung können Sie am Freitag abholen.", "spanischeRedewendung": "Puede recoger el pedido el viernes.", "kontext": "Zahlung", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Kannst du mir bitte bei der Lieferung helfen?", "spanischeRedewendung": "¿Puedes ayudarme con la entrega, por favor?", "kontext": "Kollegen", "schwierigkeitsgrad": "2" },
+  { "deutscheRedewendung": "Die Blumen müssen heute noch gegossen werden.", "spanischeRedewendung": "Las flores tienen que regarse hoy todavía.", "kontext": "Kollegen", "schwierigkeitsgrad": "3" }
+]
