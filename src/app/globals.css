@@ -126,7 +126,7 @@
     @apply text-foreground;
     background-color: var(--background);
     background-image:
-      linear-gradient(to bottom, color-mix(in oklch, var(--background) 80%, transparent), color-mix(in oklch, var(--background) 80%, transparent)),
+      linear-gradient(to bottom, color-mix(in oklch, var(--background) 50%, transparent), color-mix(in oklch, var(--background) 80%, transparent)),
       url('/background.png');
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
