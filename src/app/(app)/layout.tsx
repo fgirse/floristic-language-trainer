@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Special_Elite } from 'next/font/google'
 import { getPayloadClient } from '@/lib/payload'
 import AppNavbar from '@/components/navigation/AppNavbar'
 import '../globals.css'
@@ -12,6 +12,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+})
+
+const specialElite = Special_Elite({
+  variable: '--font-special-elite',
+  subsets: ['latin'],
+  weight: '400',
 })
 
 export const metadata: Metadata = {
@@ -39,7 +45,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   }
 
   return (
-    <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="de" className={`${geistSans.variable} ${geistMono.variable} ${specialElite.variable}`}>
       <body className="antialiased" suppressHydrationWarning>
         <div className="min-h-screen">
           <AppNavbar menuItems={menuItems} />
