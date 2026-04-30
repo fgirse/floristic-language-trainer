@@ -127,7 +127,7 @@
     background-color: var(--background);
     background-image:
       linear-gradient(to bottom, color-mix(in oklch, var(--background) 80%, transparent), color-mix(in oklch, var(--background) 80%, transparent)),
-      url('/flowers.png');
+      url('/background.png');
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     background-size: cover, cover;
