@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Flower2, Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet'
@@ -20,7 +21,7 @@ export default function AppNavbar({ menuItems }: { menuItems: MenuItem[] }) {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-primary font-bold text-lg">
           <Flower2 className="h-6 w-6" />
-          <span>Floristic Deutsch</span>
+          <span>Floristic Deutsch Trainer</span>
         </Link>
 
         {/* Desktop nav */}
@@ -30,13 +31,46 @@ export default function AppNavbar({ menuItems }: { menuItems: MenuItem[] }) {
               key={item.href}
               href={item.href}
               className={cn(
-                'px-4 py-2 rounded-md text-sm font-medium transition-colors',
+                'relative px-4 py-2 rounded-md text-sm font-medium transition-colors',
                 pathname === item.href
                   ? 'bg-primary text-primary-foreground'
                   : 'text-muted-foreground hover:text-foreground hover:bg-accent',
               )}
             >
-              {item.label}
+              <span>{item.label}</span>
+              {item.label === 'Vokabeln' && (
+                <Image
+                  src="/wave-blue.svg"
+                  alt=""
+                  aria-hidden={true}
+                  width={64}
+                  height={10}
+                  unoptimized
+                  className="absolute left-0 -bottom-1.5 w-full h-auto pointer-events-none"
+                />
+              )}
+              {item.label === 'Redewendungen' && (
+                <Image
+                  src="/rect1.svg"
+                  alt=""
+                  aria-hidden={true}
+                  width={56}
+                  height={10}
+                  unoptimized
+                  className="absolute left-0 -bottom-1.0 w-full h-auto pointer-events-none"
+                />
+              )}
+              {item.label === 'Simulation' && (
+                <Image
+                  src="/halbkreis-chartreuse.svg"
+                  alt=""
+                  aria-hidden={true}
+                  width={56}
+                  height={10}
+                  unoptimized
+                  className="absolute left-0 -bottom-1.5 w-full h-auto pointer-events-none"
+                />
+              )}
             </Link>
           ))}
         </nav>

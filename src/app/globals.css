@@ -54,17 +54,17 @@
   /* Floristik theme — forest green primary, warm earth tones */
   --background: oklch(0.975 0.008 80);
   --foreground: oklch(0.18 0.02 60);
-  --card: oklch(0.99 0.002 80);
+  --card: oklch(97.748% 0.00781 106.767);
   --card-foreground: oklch(0.18 0.02 60);
   --popover: oklch(0.99 0.002 80);
   --popover-foreground: oklch(0.18 0.02 60);
-  --primary: oklch(0.40 0.12 145);
+  --primary: oklch(65.415% 0.08337 149.691);
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.90 0.04 65);
   --secondary-foreground: oklch(0.25 0.03 60);
   --muted: oklch(0.94 0.015 80);
   --muted-foreground: oklch(0.52 0.03 70);
-  --accent: oklch(0.70 0.10 145);
+  --accent: oklch(92.898% 0.03909 145.377);
   --accent-foreground: oklch(0.15 0.04 145);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.88 0.02 80);

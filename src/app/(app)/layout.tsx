@@ -45,7 +45,11 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   }
 
   return (
-    <html lang="de" className={`${geistSans.variable} ${geistMono.variable} ${specialElite.variable}`}>
+    <html
+      lang="de"
+      className={`${geistSans.variable} ${geistMono.variable} ${specialElite.variable}`}
+      suppressHydrationWarning
+    >
       <body className="antialiased" suppressHydrationWarning>
         <div className="min-h-screen">
           <AppNavbar menuItems={menuItems} />

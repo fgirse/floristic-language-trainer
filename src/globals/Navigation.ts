@@ -4,8 +4,7 @@ export const Navigation: GlobalConfig = {
   slug: 'navigation',
   access: {
     read: () => true,
-    update: ({ req: { user } }) =>
-      Boolean(user && (user as any).role === 'admin'),
+    update: ({ req: { user } }) => Boolean(user && user.role === 'admin'),
   },
   fields: [
     {
