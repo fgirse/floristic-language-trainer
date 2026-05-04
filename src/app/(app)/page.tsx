@@ -1,7 +1,7 @@
+import Image from 'next/image'
 import { getPayloadClient } from '@/lib/payload'
 import StatsBar from '@/components/home/StatsBar'
 import NavigationCards from '@/components/home/NavigationCards'
-import { Flower2 } from 'lucide-react'
 
 export default async function HomePage() {
   const payload = await getPayloadClient()
@@ -14,20 +14,30 @@ export default async function HomePage() {
 
   return (
     <div className="space-y-10">
-      <section className="text-center py-8">
-        <div className="flex justify-center mb-4">
-          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-            <Flower2 className="h-9 w-9 text-primary" />
-          </div>
+      {/* Hero */}
+      <section className="relative w-full overflow-hidden rounded-xl
+                          h-48 sm:h-64 md:h-80 lg:h-96">
+        <Image
+          src="/HeroTitle.png"
+          alt="Floristik Sprach Trainer"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
+        />
+        {/* overlay for legibility */}
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+          <h1 className="text-white font-bold drop-shadow-lg
+                         text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
+            Floristik Sprach Trainer
+          </h1>
+          <p className="mt-2 text-white/80 drop-shadow
+                        text-sm sm:text-base md:text-lg max-w-xl">
+            Lerne Deutsch für deinen Job als Floristin — Vokabeln, Redewendungen und echte
+            Kundengespräche, auf Schweizer&nbsp;🇨🇭 Niveau.
+          </p>
         </div>
-        <h1 className="text-4xl font-bold text-foreground mb-3">Deutsch für Floristik</h1>
-        <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-          Lerne Deutsch für deinen Job als Floristin — Vokabeln, Redewendungen und echte
-          Kundengespräche, auf Schweizer 🇨🇭 Niveau.
-        </p>
-        <p className="text-sm text-muted-foreground/70 mt-2">
-          Aprende alemán para trabajar como florista en Suiza 🇨🇭
-        </p>
       </section>
 
       <StatsBar
