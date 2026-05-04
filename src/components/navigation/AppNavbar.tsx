@@ -20,8 +20,8 @@ export default function AppNavbar({ menuItems }: { menuItems: MenuItem[] }) {
     <header className="sticky top-0 z-40 bg-card border-b border-border shadow-sm">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-primary font-bold text-lg">
-          <Flower2 className="h-6 w-6" />
-          <span>Floristic Deutsch Trainer</span>
+        
+          <span>🌱 Floristic Deutsch Trainer 🌱</span>
         </Link>
 
         {/* Desktop nav */}
@@ -78,11 +78,13 @@ export default function AppNavbar({ menuItems }: { menuItems: MenuItem[] }) {
         {/* Mobile nav */}
         <Sheet>
           <SheetTrigger
-            render={<Button variant="ghost" size="icon" className="md:hidden" />}
-          >
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Menü öffnen</span>
-          </SheetTrigger>
+            render={(props) => (
+              <Button variant="ghost" size="icon" className="md:hidden" {...props}>
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Menü öffnen</span>
+              </Button>
+            )}
+          />
           <SheetContent side="right" className="w-64">
             <SheetHeader>
               <SheetTitle className="flex items-center gap-2 text-primary">
