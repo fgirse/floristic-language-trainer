@@ -7,7 +7,11 @@ export const Vokabeln: CollectionConfig = {
     defaultColumns: ['deutschesBegriff', 'spanischerBegriff', 'kategorie', 'schwierigkeitsgrad'],
   },
   access: {
-    read: () => true,
+    read: ({ req: { user } }) => {
+      if (!user) return false
+      if (['admin', 'editor'].includes((user as any).role)) return true
+      return (user as any).subscriptionStatus === 'active'
+    },
     create: ({ req: { user } }) =>
       Boolean(user && ['admin', 'editor'].includes((user as any).role)),
     update: ({ req: { user } }) =>

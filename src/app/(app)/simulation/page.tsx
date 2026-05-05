@@ -1,7 +1,12 @@
 import { getPayloadClient } from '@/lib/payload'
+import { getCurrentUser, hasAccess } from '@/lib/auth'
+import AccessGate from '@/components/auth/AccessGate'
 import SzenarioSelector from '@/components/simulation/SzenarioSelector'
 
 export default async function SimulationPage() {
+  const user = await getCurrentUser()
+  if (!hasAccess(user)) return <AccessGate user={user} />
+
   const payload = await getPayloadClient()
 
   const { docs } = await payload.find({

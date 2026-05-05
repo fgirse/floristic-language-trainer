@@ -1,5 +1,7 @@
 import { Suspense } from 'react'
 import { getPayloadClient } from '@/lib/payload'
+import { getCurrentUser, hasAccess } from '@/lib/auth'
+import AccessGate from '@/components/auth/AccessGate'
 import KategorieFilter from '@/components/vokabeln/KategorieFilter'
 import VokabelGrid from '@/components/vokabeln/VokabelGrid'
 import { Skeleton } from '@/components/ui/skeleton'
@@ -10,6 +12,9 @@ export default async function VokabelnPage({
 }: {
   searchParams: Promise<{ kategorie?: string }>
 }) {
+  const user = await getCurrentUser()
+  if (!hasAccess(user)) return <AccessGate user={user} />
+
   const { kategorie } = await searchParams
   const payload = await getPayloadClient()
 

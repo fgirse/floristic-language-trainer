@@ -1,5 +1,7 @@
 import { Suspense } from 'react'
 import { getPayloadClient } from '@/lib/payload'
+import { getCurrentUser, hasAccess } from '@/lib/auth'
+import AccessGate from '@/components/auth/AccessGate'
 import KontextFilter from '@/components/redewendungen/KontextFilter'
 import RedewendungCard from '@/components/redewendungen/RedewendungCard'
 import { Skeleton } from '@/components/ui/skeleton'
@@ -10,6 +12,9 @@ export default async function RedewendungenPage({
 }: {
   searchParams: Promise<{ kontext?: string }>
 }) {
+  const user = await getCurrentUser()
+  if (!hasAccess(user)) return <AccessGate user={user} />
+
   const { kontext } = await searchParams
   const payload = await getPayloadClient()
 

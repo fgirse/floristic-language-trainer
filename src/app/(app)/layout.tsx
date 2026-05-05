@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Special_Elite } from 'next/font/google'
 import { getPayloadClient } from '@/lib/payload'
+import { getCurrentUser } from '@/lib/auth'
 import AppNavbar from '@/components/navigation/AppNavbar'
 import '../globals.css'
 
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const payload = await getPayloadClient()
+  const user = await getCurrentUser()
 
   let menuItems: { label: string; href: string }[] = [
     { label: 'Home', href: '/' },
@@ -52,11 +54,10 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     >
       <body className="antialiased" suppressHydrationWarning>
         <div className="min-h-screen">
-          <AppNavbar menuItems={menuItems} />
+          <AppNavbar menuItems={menuItems} user={user} />
           <main className="container mx-auto px-4 py-8">{children}</main>
         </div>
       </body>
     </html>
   )
 }
-
